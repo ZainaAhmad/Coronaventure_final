@@ -61,7 +61,7 @@ class Game{
          player.sprite.visible=true;
          player.sprite.velocityX=8;
          camera.position.x=player.sprite.x+520;
-         if(keyIsDown(32)&&player.sprite.y>=556){
+         if(keyIsDown(32)&&player.sprite.y>=height-200){
              player.jump();
              
              
