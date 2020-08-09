@@ -4,8 +4,8 @@ class Game{
         this.x=600;
         this.playButton=createSprite(width/2,height/2+100,50,50);
         this.playButton.addImage(playButtonImg);
-        this.playButton.scale=0.1
-        this.house=createSprite(5000,height/2,10,10);
+        this.playButton.scale=1
+        this.house=createSprite(8500,height/2,10,10);
         this.house.addImage(houseImg);
         this.house.visible=true;
         this.x1=1200
@@ -16,10 +16,10 @@ class Game{
     start(){
         textSize(20);
         fill ("white");
-        text("Max is a boy who is running away from the Coronavirus which is all around him.",width/2-300,height/4);
-        text("Max has to try not to get infected, which happens when the virus touches him.",width/2-300,height/4+50);
-        text("He needs to run and reach his house.Along the way, he would be getting",width/2-275,height/4+100);
-        text("Masks and sanitizers to help him reach home safely.",width/2-225,height/4+150);
+        text("Makenzie is a girl who is running away from the Coronavirus which is all around her.",width/2-300,height/4);
+        text("Makenzie has to try not to get infected, which happens when the virus touches her.",width/2-300,height/4+50);
+        text("She needs to run and reach her house.Along the way, she would be getting",width/2-275,height/4+100);
+        text("Masks and sanitizers to help her reach home safely.",width/2-225,height/4+150);
         textSize(50);
         fill ("white");
         textStyle(BOLD);
@@ -47,7 +47,7 @@ class Game{
              this.time=3;
          }
         if(player.sprite.isTouching (this.virusGroup)&&this.flag===0) {
-            gameState=2
+           gameState=2
         }
         if(player.sprite.isTouching (this.house)){
             gameState=3
