@@ -12,6 +12,9 @@ class Game{
         this.itemGroup=new Group();
         this.time=3;
         this.flag=0;
+        this.surveyButton=createSprite(8000,500,10,10);
+        this.surveyButton.addImage(surveyButtonImg);
+        this.surveyButton.visible=false;
     }
     start(){
         textSize(20);
@@ -78,6 +81,15 @@ class Game{
          player.sprite.visible=false;
          this.itemGroup.destroyEach();
          this.house.visible=false;
+         this.surveyButton.visible=true;
+         this.surveyButton.x=camera.position.x-300;
+         this.surveyButton.y=camera.position.y;
+         if(mousePressedOver (this.surveyButton)){
+            gameState=4;
+            this.surveyButton.visible=false;
+            form=new Form();
+         }
+         
 
      }
         win(){
@@ -89,6 +101,14 @@ class Game{
          console.log("You Win!");
          this.virusGroup.destroyEach();
          this.itemGroup.destroyEach();
+         this.surveyButton.visible=true;
+         this.surveyButton.x=camera.position.x-300;
+         this.surveyButton.y=camera.position.y;
+         if(mousePressedOver (this.surveyButton)){
+            gameState=4;
+            form=new Form();
+            this.surveyButton.visible=false;
+         }
 
 
         }
