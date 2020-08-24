@@ -1,11 +1,11 @@
 class Form{
     constructor(){
         this.thx=createSprite(width/2,height/2+200);
-        this.thanks=loadImage("thx.png");
+        this.thanks=loadImage("images/thx.png");
         this.thx.addImage(this.thanks);
         this.thx.visible=false;
         this.greeting=createSprite(width/2,height/2-100);
-        this.greetingImg=loadImage("greeting.png");
+        this.greetingImg=loadImage("images/greeting.png");
         this.greeting.addImage(this.greetingImg);
         this.greeting.visible=false;
         
@@ -76,7 +76,11 @@ class Form{
          this.Q4.position(50,500);
         this.submitButton.mousePressed(()=>{
         this.thx.visible=true;
+        this.thx.x=camera.position.x
+        this.thx.y=camera.position.y+200;
             this.greeting.visible=true;
+            this.greeting.x=camera.position.x
+            this.greeting.y=camera.position.y-100;
             this.Q1.hide();
             this.Q2.hide();
             this.Q3.hide();
