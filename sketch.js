@@ -14,6 +14,7 @@ var mask;
 var sanitizer;
 var surveyButtonImg;
 var form;
+var database;
 
 
 
@@ -35,6 +36,7 @@ function preload(){
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
+  database=firebase.database()
   player=new Player();
   game=new Game();
   ground=createSprite(width/2,height-10,width,10);

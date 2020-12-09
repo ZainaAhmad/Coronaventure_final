@@ -6,6 +6,27 @@
 <script src="Player.js"></script>
 <script src="Game.js"></script>
 <script src="Form.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC0ZFpYUx3Vp45JDw09MWlVXqDGZLavCJs",
+    authDomain: "coronaventure-survey.firebaseapp.com",
+    databaseURL: "https://coronaventure-survey.firebaseio.com",
+    projectId: "coronaventure-survey",
+    storageBucket: "coronaventure-survey.appspot.com",
+    messagingSenderId: "988159839611",
+    appId: "1:988159839611:web:36bba26d73e81ccf5f81de"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
 

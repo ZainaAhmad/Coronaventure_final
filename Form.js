@@ -19,7 +19,6 @@ class Form{
         this.Q1=createElement('h3');
         this.Q2=createElement('h3');
         this.Q3=createElement('h3');
-        this.Q4=createElement('h3');
 
         this.radio1=createRadio('h3')
         this.radio1.position(100,200);
@@ -45,10 +44,6 @@ class Form{
         this.radio3.option('I am a health care worker and I was exposed to a Covid-19 pateint without gear.',2);
         this.radio3.option('None of these',3);
 
-         this.radio4=createRadio('h3')
-         this.radio4.position(100,550);
-         this.radio4.option('yes');
-         this.radio4.option('no');
 
         this.nameInput=createInput("Name(Edit Name)");
         this.nameInput.position(40,100);
@@ -72,8 +67,6 @@ class Form{
         this.Q2.position(50,250)
         this.Q3.html("Q3.Which of the following apply to you?");
         this.Q3.position(50,350);
-         this.Q4.html("Q4.Travel?");
-         this.Q4.position(50,500);
         this.submitButton.mousePressed(()=>{
         this.thx.visible=true;
         this.thx.x=camera.position.x
@@ -84,11 +77,9 @@ class Form{
             this.Q1.hide();
             this.Q2.hide();
             this.Q3.hide();
-            this.Q4.hide();
             this.radio1.hide();
             this.radio2.hide();
             this.radio3.hide();
-            this.radio4.hide();
             this.emailInput.hide();
             this.nameInput.hide();
             this.addressInput.hide();
@@ -104,7 +95,6 @@ class Form{
                 Q1:this.radio1.value(),
                 Q2:this.radio2.value(),
                 Q3:this.radio3.value(),
-                Q4:this.radio4.value(),
                 specificSymptoms:this.specificationsInput.value()
                 
                 
